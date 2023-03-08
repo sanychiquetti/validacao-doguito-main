@@ -24,17 +24,17 @@
                 <fieldset>
                     <legend class="formulario__legenda">Informações básicas</legend>
                     <div class="input-container">
-                        <input name="nome" id="nome" class="input" type="text" required placeholder="Nome">
+                        <input name="nome" id="nome" class="input" type="text" data-tipo="nome" required placeholder="Nome">
                         <label class="input-label" for="nome">Nome</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="email" id="email" class="input" type="email" required placeholder="Email">
+                        <input name="email" id="email" class="input" type="email" data-tipo="email" required placeholder="Email">
                         <label class="input-label" for="email">Email</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="senha" id="senha" class="input" type="password" required placeholder="Senha">
+                        <input name="senha" id="senha" class="input" type="password" data-tipo="senha" required placeholder="Senha">
                         <label class="input-label" for="senha">Senha</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
@@ -47,7 +47,7 @@
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF">
+                        <input name="cpf" id="cpf" class="input" data-tipo="cpf" required type="text" placeholder="CPF">
                         <label class="input-label" for="cpf">CPF</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
@@ -55,22 +55,22 @@
                 <fieldset>
                     <legend class="formulario__legenda">Endereço</legend>
                     <div class="input-container">
-                        <input name="cep" id="cep" class="input" type="text" placeholder="CEP">
+                        <input name="cep" id="cep" class="input" pattern="[\d]{5}-?[\d]{3}" required data-tipo="cep" type="text" placeholder="CEP">
                         <label class="input-label" for="cep">CEP</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="logradouro" id="logradouro" class="input" type="text" placeholder="Logradouro">
+                        <input name="logradouro" id="logradouro" class="input" type="text" data-tipo="logradouro" required placeholder="Logradouro">
                         <label class="input-label" for="logradouro">Logradouro</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="cidade" id="cidade" class="input" type="text" placeholder="Cidade">
+                        <input name="cidade" id="cidade" class="input" type="text" data-tipo="cidade" required  placeholder="Cidade">
                         <label class="input-label" for="cidade">Cidade</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="estado" id="estado" class="input" type="text" placeholder="Estado">
+                        <input name="estado" id="estado" class="input" type="text" required data-tipo="estado" placeholder="Estado">
                         <label class="input-label" for="estado">Estado</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
@@ -79,6 +79,6 @@
             </form>
         </section>
     </main>
-    <script src="js/validacao.js"></script>
+    <script src="./js/app.js" type="module"></script>
 </body>
 </html>
